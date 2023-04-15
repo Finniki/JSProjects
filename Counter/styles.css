@@ -19,8 +19,11 @@ h1, h2 {
 }
 .buttons {
     display: flex;
+    justify-content: space-between;
+    width: 20%;
     margin: 0 auto;
 }
 .btn {
     background-color: antiquewhite;
+    font-size: 2rem
 }
