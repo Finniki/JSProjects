@@ -12,13 +12,6 @@ const clickHandler = (event) => {
   const clicked = event.target;
   console.log(clicked.classList);
   //   console.log(clicked, clicked.class, clicked);
-
-  if (clicked.classList.contains("btn-add")) {
-    console.log("Positive click!");
-    add();
-  } else if (clicked.classList.contains("btn-sub")) {
-    console.log("minus");
-  }
 };
 
 button.addEventListener("click", clickHandler);
