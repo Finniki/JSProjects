@@ -6,6 +6,10 @@ const add = () => {
   counter++;
   console.log(counter);
 };
+const minus = () => {
+  counter--;
+  console.log(counter);
+};
 
 const clickHandler = (event) => {
   console.log(event.target);
