@@ -1,4 +1,5 @@
 const button = document.querySelector(".buttons");
+const count = document.querySelector(".count");
 
 let counter = 0;
 
