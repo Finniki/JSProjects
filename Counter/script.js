@@ -24,6 +24,8 @@ const clickHandler = (event) => {
     console.log("minus");
     minus();
   }
+
+  count.innerHTML = counter;
 };
 
 button.addEventListener("click", clickHandler);
