@@ -8,6 +8,7 @@ body {
 h1, h2 {
     color: sienna;
     margin-bottom: 8rem;
+    font-size: 4rem;
 }
 .counter-card {
     width: 40%;
