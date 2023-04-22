@@ -6,6 +6,9 @@
 html {
     font-size: 62.5%;
 }
-body {
-    background-color: blanchedalmond;
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    padding: 2rem;
 }
