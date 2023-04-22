@@ -5,10 +5,22 @@
 } 
 html {
     font-size: 62.5%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .score-board {
     display: flex;
     justify-content: space-between;
-    width: 20%;
+    width: 40%;
     padding: 2rem;
+}
+.board {
+    font-size: 2.4rem;
+    display: flex;
+    gap: 2rem;
+}
+.number-board {
+    border: 2px solid #ffebcd;
+    background-color: #ffebcd;
+    width: 8rem;
+    height: 50px;
 }
