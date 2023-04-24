@@ -39,3 +39,7 @@ html {
     width: 8rem;
     height: 4rem;
 }
+.feedback-div {
+    margin-top: 40px;
+    font-size: 3rem;
+}
