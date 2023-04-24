@@ -33,4 +33,9 @@ html {
 }
 .title-text {
     font-size: 3rem;
+    margin-bottom: 20px;
+}
+.guess {
+    width: 8rem;
+    height: 4rem;
 }
