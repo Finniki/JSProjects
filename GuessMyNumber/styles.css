@@ -28,4 +28,9 @@ html {
     display: flex;
     text-align: center;
 }
-
+.title {
+    font-size: 8rem;
+}
+.title-text {
+    font-size: 3rem;
+}
