@@ -24,3 +24,22 @@ html {
     width: 8rem;
     height: 50px;
 }
+.game-card {
+    display: flex;
+    text-align: center;
+}
+.title {
+    font-size: 8rem;
+}
+.title-text {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.guess, .btn {
+    width: 8rem;
+    height: 4rem;
+}
+.feedback-div {
+    margin-top: 40px;
+    font-size: 3rem;
+}
