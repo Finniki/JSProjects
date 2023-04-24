@@ -35,7 +35,7 @@ html {
     font-size: 3rem;
     margin-bottom: 20px;
 }
-.guess {
+.guess, .btn {
     width: 8rem;
     height: 4rem;
 }
