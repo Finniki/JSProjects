@@ -24,3 +24,8 @@ html {
     width: 8rem;
     height: 50px;
 }
+.game-card {
+    display: flex;
+    text-align: center;
+}
+
