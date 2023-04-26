@@ -8,7 +8,11 @@ const feedback = document.querySelector(".feedback-div");
 const secretNumber = Math.round(Math.random() * 10);
 const clickHandler = (event) => {
   const guess = guessBox.value;
-  console.log(secretNumber);
+
+  if (+guess === secretNumber) {
+    
+  }
+
 };
 guessBtn.addEventListener("click", clickHandler);
 //check the number
