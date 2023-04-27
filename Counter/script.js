@@ -3,11 +3,11 @@ const count = document.querySelector(".count");
 
 let counter = 0;
 
-const add = () => {
+const incrementCounter = () => {
   counter++;
   console.log(counter);
 };
-const minus = () => {
+const decrementCounter = () => {
   counter--;
   console.log(counter);
 };
@@ -16,16 +16,12 @@ const clickHandler = (event) => {
   console.log(event.target);
   const clicked = event.target;
   console.log(clicked.classList);
-  //   console.log(clicked, clicked.class, clicked);
-  if (clicked.classList.contains("btn-add")) {
-    console.log("Positive click!");
-    add();
-  } else if (clicked.classList.contains("btn-sub")) {
-    console.log("minus");
-    minus();
-  }
+  clicked.classList.contains("increment-button")
+    ? incrementCounter()
+    : decrementCounter();
 
   count.innerHTML = counter;
 };
-
-button.addEventListener("click", clickHandler);
+button && count
+  ? button.addEventListener("click", clickHandler)
+  : console.error("Could not find button or count element");
