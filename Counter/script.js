@@ -3,11 +3,11 @@ const count = document.querySelector(".count");
 
 let counter = 0;
 
-const add = () => {
+const incrementCounter = () => {
   counter++;
   console.log(counter);
 };
-const minus = () => {
+const decrementCounter = () => {
   counter--;
   console.log(counter);
 };
@@ -19,10 +19,10 @@ const clickHandler = (event) => {
   //   console.log(clicked, clicked.class, clicked);
   if (clicked.classList.contains("btn-add")) {
     console.log("Positive click!");
-    add();
+    incrementCounter();
   } else if (clicked.classList.contains("btn-sub")) {
     console.log("minus");
-    minus();
+    decrementCounter();
   }
 
   count.innerHTML = counter;
