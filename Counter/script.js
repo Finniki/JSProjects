@@ -24,8 +24,10 @@ const clickHandler = (event) => {
     console.log("minus");
     decrementCounter();
   }
-
   count.innerHTML = counter;
 };
-
-button.addEventListener("click", clickHandler);
+if (button && count) {
+  button.addEventListener("click", clickHandler);
+} else {
+  console.error("Could not find button or count element");
+}
