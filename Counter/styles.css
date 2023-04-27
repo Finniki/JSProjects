@@ -1,9 +1,14 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 html {
     font-size: 62.5%;
 }
-/* body {
+ body { 
     background-color: bisque;
-} */
+} 
 h1, h2 {
     color: sienna;
     margin-bottom: 8rem;
