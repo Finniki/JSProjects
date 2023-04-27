@@ -43,11 +43,15 @@ h1, h2 {
     border: none;
     border-radius: 8px;
     background-color: bisque; 
-    box-shadow: 8px 8px 28px #999;   
+    box-shadow: 8px 8px 28px #999; 
+    transition: box-shadow 0.3s ease-out, transform 0.3s ease-in-out; 
 }
 .btn:hover {
     cursor: pointer;
     box-shadow: 12px 12px 32px #999; 
     transform: scale(1.02);  
-
+}
+.btn:active {
+    box-shadow: 6px 6px 16px #999; 
+    transform: scale(0.9);  
 }
