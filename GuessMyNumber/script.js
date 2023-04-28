@@ -6,13 +6,13 @@ const feedback = document.querySelector(".feedback-div");
 
 // Input a number
 const secretNumber = Math.round(Math.random() * 10);
+const correct = "You have guessed correctly!";
+let message;
+let score = 20;
+let guesses = 0;
+
 const clickHandler = (event) => {
   const guess = guessBox.value;
-
-  if (+guess === secretNumber) {
-    
-  }
-
 };
 guessBtn.addEventListener("click", clickHandler);
 //check the number
