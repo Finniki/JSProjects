@@ -13,6 +13,18 @@ let guesses = 0;
 
 const clickHandler = (event) => {
   const guess = guessBox.value;
+  guessBox.value = "";
+  guesses++;
+  if (+guess === secretNumber) {
+    message = "Congratulations!! You have guessed correctly! 🎉🎉";
+  } else if (+guess < secretNumber) {
+    score--;
+    message = "Too low! 📉 Guess higher!!";
+  } else if (+guess > secretNumber) {
+    score--;
+    message = "Too high! 📈 Guess lower!!";
+  }
+  console.log(message);
 };
 guessBtn.addEventListener("click", clickHandler);
 //check the number
