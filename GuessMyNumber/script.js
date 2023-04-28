@@ -1,18 +1,32 @@
 const highScore = document.querySelector(".high-score");
-const gameScore = document.querySelector(".game-score");
+const gameScore = document.querySelector(".score");
 const guessBox = document.querySelector(".guess");
 const guessBtn = document.querySelector(".btn");
 const feedback = document.querySelector(".feedback-div");
 
 // Input a number
 const secretNumber = Math.round(Math.random() * 10);
+const correct = "You have guessed correctly!";
+let message;
+let score = 20;
+let guesses = 0;
+
 const clickHandler = (event) => {
   const guess = guessBox.value;
-
+  guessBox.value = "";
+  guesses++;
   if (+guess === secretNumber) {
-    
+    message = `Congratulations!! You have guessed correctly! 🎉🎉 It took you ${guesses} ${
+      guesses > 1 ? "guesses" : "guess"
+    }`;
+  } else if (+guess < secretNumber) {
+    gameScore.textContent = --score;
+    message = "Too low! 📉 Guess higher!!";
+  } else if (+guess > secretNumber) {
+    gameScore.textContent = --score;
+    message = "Too high! 📈 Guess lower!!";
   }
-
+  console.log(message, score);
 };
 guessBtn.addEventListener("click", clickHandler);
 //check the number
