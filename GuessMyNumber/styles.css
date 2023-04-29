@@ -35,11 +35,38 @@ html {
     font-size: 3rem;
     margin-bottom: 20px;
 }
-.guess, .btn {
+.guessing-div {
+    margin: 0 auto;
+    display: inline-flex;
+    gap: 16px;
+}
+.guess {
     width: 8rem;
     height: 4rem;
 }
 .feedback-div {
     margin-top: 40px;
     font-size: 3rem;
+}
+.restart {
+    /* margin: 100px; */
+/* transform: translateY(100px); */
+}
+.btn {
+    width: 8rem;
+    height: 4rem;
+    background-color: #f610d2;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 12px 12px 32px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease-out, transform 0.3s ease-in-out; 
+}
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.25);
+}
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.25);
 }
