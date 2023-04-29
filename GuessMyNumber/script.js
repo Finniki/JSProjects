@@ -2,7 +2,7 @@ const highScore = document.querySelector(".high-score");
 const gameScore = document.querySelector(".score");
 const guessBox = document.querySelector(".guess");
 const guessBtn = document.querySelector(".btn");
-const feedback = document.querySelector(".feedback-div");
+const feedback = document.querySelector(".feedback-msg");
 
 // Input a number
 const secretNumber = Math.round(Math.random() * 10);
@@ -26,6 +26,7 @@ const clickHandler = (event) => {
     gameScore.textContent = --score;
     message = "Too high! 📈 Guess lower!!";
   }
+  feedback.textContent = message;
   console.log(message, score);
 };
 guessBtn.addEventListener("click", clickHandler);
