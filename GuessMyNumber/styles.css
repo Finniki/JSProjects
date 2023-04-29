@@ -35,6 +35,11 @@ html {
     font-size: 3rem;
     margin-bottom: 20px;
 }
+.guessing-div {
+    margin: 0 auto;
+    display: inline-flex;
+    gap: 16px;
+}
 .guess {
     width: 8rem;
     height: 4rem;
@@ -53,4 +58,13 @@ html {
     border: none;
     border-radius: 6px;
     box-shadow: 12px 12px 32px rgba(0, 0, 0, 0.25);
+}
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.25);
+}
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.25);
 }
