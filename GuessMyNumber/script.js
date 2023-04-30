@@ -1,8 +1,9 @@
 const highScore = document.querySelector(".high-score");
 const gameScore = document.querySelector(".score");
 const guessBox = document.querySelector(".guess");
-const guessBtn = document.querySelector(".btn");
+const guessBtn = document.querySelector(".guess");
 const feedback = document.querySelector(".feedback-msg");
+const restartBtn = document.querySelector(".restart");
 
 // Input a number
 const secretNumber = Math.round(Math.random() * 10);
