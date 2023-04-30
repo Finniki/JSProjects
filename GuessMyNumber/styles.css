@@ -3,6 +3,7 @@
    margin: 0;
    box-sizing: border-box; 
 } 
+
 html {
     font-size: 62.5%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -11,6 +12,7 @@ html {
     display: flex;
     justify-content: space-between;
     width: 40%;
+    height: 15vh;
     padding: 2rem;
 }
 .board {
@@ -27,6 +29,7 @@ html {
 .game-card {
     display: flex;
     text-align: center;
+    height: 85vh;
 }
 .title {
     font-size: 8rem;
@@ -47,7 +50,7 @@ html {
 .feedback-div {
     margin-top: 40px;
     font-size: 3rem;
-    height: 180px;
+    height: 120px;
 }
 
 .btn {
