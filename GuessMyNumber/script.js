@@ -1,7 +1,7 @@
 const highScore = document.querySelector(".high-score");
 const gameScore = document.querySelector(".score");
 const guessBox = document.querySelector(".guess");
-const guessBtn = document.querySelector(".guess");
+const guessBtn = document.querySelector(".guess-btn");
 const feedback = document.querySelector(".feedback-msg");
 const restartBtn = document.querySelector(".restart");
 
@@ -29,6 +29,12 @@ const clickHandler = (event) => {
   }
   feedback.textContent = message;
   console.log(message, score);
+};
+
+const restartHandler = () => {
+  score = 20;
+  gameScore.innerHTML = score;
+  feedback.textContent = "";
 };
 
 guessBtn.addEventListener("click", clickHandler);
