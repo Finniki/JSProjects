@@ -10,6 +10,7 @@ const secretNumber = Math.round(Math.random() * 10);
 const correct = "You have guessed correctly!";
 let message;
 let score = 20;
+let gameHighScore = 0;
 let guesses = 0;
 
 const clickHandler = (event) => {
