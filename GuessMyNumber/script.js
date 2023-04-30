@@ -30,7 +30,7 @@ const clickHandler = (event) => {
     message = "Too high! 📈 Guess lower!!";
   }
   feedback.textContent = message;
-  console.log(message, score);
+  highScore.textContent = gameHighScore;
 };
 
 const restartHandler = () => {
