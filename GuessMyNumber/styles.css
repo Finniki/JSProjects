@@ -47,11 +47,9 @@ html {
 .feedback-div {
     margin-top: 40px;
     font-size: 3rem;
+    height: 180px;
 }
-.restart {
-    /* margin: 100px; */
-/* transform: translateY(100px); */
-}
+
 .btn {
     width: 8rem;
     height: 4rem;
