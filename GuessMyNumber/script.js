@@ -30,7 +30,9 @@ const clickHandler = (event) => {
   feedback.textContent = message;
   console.log(message, score);
 };
+
 guessBtn.addEventListener("click", clickHandler);
+restartBtn.addEventListener("click", restartHandler);
 //check the number
 // const checkGuess = () = {}
 // give feedback; too high, too low, correct
