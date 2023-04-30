@@ -8,6 +8,7 @@ html {
     font-size: 62.5%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 .score-board {
     display: flex;
     justify-content: space-between;
