@@ -21,6 +21,7 @@ const clickHandler = (event) => {
     message = `Congratulations!! You have guessed correctly! 🎉🎉 It took you ${guesses} ${
       guesses > 1 ? "guesses" : "guess"
     }`;
+    score > gameHighScore ? (gameHighScore = score) : "";
   } else if (+guess < secretNumber) {
     gameScore.textContent = --score;
     message = "Too low! 📉 Guess higher!!";
