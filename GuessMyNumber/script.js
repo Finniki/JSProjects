@@ -6,7 +6,7 @@ const feedback = document.querySelector(".feedback-msg");
 const restartBtn = document.querySelector(".restart");
 
 // Input a number
-const secretNumber = Math.round(Math.random() * 10);
+let secretNumber = Math.round(Math.random() * 10);
 const correct = "You have guessed correctly!";
 let message;
 let score = 20;
@@ -37,12 +37,8 @@ const restartHandler = () => {
   score = 20;
   gameScore.innerHTML = score;
   feedback.textContent = "";
+  secretNumber = Math.round(Math.random() * 10);
 };
 
 guessBtn.addEventListener("click", clickHandler);
 restartBtn.addEventListener("click", restartHandler);
-//check the number
-// const checkGuess = () = {}
-// give feedback; too high, too low, correct
-//adjust the score/
-//at tjhe end of the game, adjust the highsscore.
