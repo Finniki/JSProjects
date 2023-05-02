@@ -42,6 +42,7 @@ const clickHandler = (event) => {
   const guess = +guessBox.value;
   guessBox.value = "";
   guesses++;
+  checkInput(guess);
   feedback.textContent = message;
   highScore.textContent = gameHighScore;
 };
