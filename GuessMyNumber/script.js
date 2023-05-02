@@ -49,9 +49,9 @@ const clickHandler = (event) => {
   } else {
     // process valid input
     checkInput(guess);
+    feedback.textContent = message;
+    highScore.textContent = gameHighScore;
   }
-  feedback.textContent = message;
-  highScore.textContent = gameHighScore;
 };
 
 const restartHandler = () => {
