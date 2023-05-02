@@ -23,10 +23,7 @@ const validateInput = (input, min, max) => {
   return true; // input is valid
 };
 
-const clickHandler = (event) => {
-  const guess = +guessBox.value;
-  guessBox.value = "";
-  guesses++;
+const checkInput = (guess) => {
   if (guess === secretNumber) {
     message = `Congratulations!! You have guessed correctly! 🎉🎉 It took you ${guesses} ${
       guesses > 1 ? "guesses" : "guess"
@@ -39,6 +36,12 @@ const clickHandler = (event) => {
     gameScore.textContent = --score;
     message = "Too high! 📈 Guess lower!!";
   }
+};
+
+const clickHandler = (event) => {
+  const guess = +guessBox.value;
+  guessBox.value = "";
+  guesses++;
   feedback.textContent = message;
   highScore.textContent = gameHighScore;
 };
