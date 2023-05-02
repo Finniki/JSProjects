@@ -42,7 +42,14 @@ const clickHandler = (event) => {
   const guess = +guessBox.value;
   guessBox.value = "";
   guesses++;
-  checkInput(guess);
+  const isValid = validateInput(guess, 1, 10); // check whether input is between 1 and 10
+  if (!isValid) {
+    alert("Please enter a number between 1 and 10."); // show error message
+    event.target.value = ""; // clear input field
+  } else {
+    // process valid input
+    console.log(isValid);
+  }
   feedback.textContent = message;
   highScore.textContent = gameHighScore;
 };
