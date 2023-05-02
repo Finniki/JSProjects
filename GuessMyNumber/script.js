@@ -6,43 +6,61 @@ const feedback = document.querySelector(".feedback-msg");
 const restartBtn = document.querySelector(".restart");
 
 // Input a number
-const secretNumber = Math.round(Math.random() * 10);
+let secretNumber = Math.round(Math.random() * 10);
 const correct = "You have guessed correctly!";
 let message;
 let score = 20;
 let gameHighScore = 0;
 let guesses = 0;
 
-const clickHandler = (event) => {
-  const guess = guessBox.value;
-  guessBox.value = "";
-  guesses++;
-  if (+guess === secretNumber) {
+const validateInput = (input, min, max) => {
+  if (isNaN(input)) {
+    return false; // input is not a number
+  }
+  if (input < min || input > max) {
+    return false; // input is outside of the allowed range
+  }
+  return true; // input is valid
+};
+
+const checkInput = (guess) => {
+  if (guess === secretNumber) {
     message = `Congratulations!! You have guessed correctly! 🎉🎉 It took you ${guesses} ${
       guesses > 1 ? "guesses" : "guess"
     }`;
     score > gameHighScore ? (gameHighScore = score) : "";
-  } else if (+guess < secretNumber) {
+  } else if (guess < secretNumber) {
     gameScore.textContent = --score;
     message = "Too low! 📉 Guess higher!!";
-  } else if (+guess > secretNumber) {
+  } else if (guess > secretNumber) {
     gameScore.textContent = --score;
     message = "Too high! 📈 Guess lower!!";
   }
-  feedback.textContent = message;
-  highScore.textContent = gameHighScore;
+};
+
+const clickHandler = (event) => {
+  const guess = +guessBox.value;
+  guessBox.value = "";
+  guesses++;
+  const isValid = validateInput(guess, 1, 20); // check whether input is between 1 and 10
+  if (!isValid) {
+    alert("Please enter a number between 1 and 20."); // show error message
+    event.target.value = ""; // clear input field
+  } else {
+    // process valid input
+    checkInput(guess);
+    feedback.textContent = message;
+    highScore.textContent = gameHighScore;
+  }
 };
 
 const restartHandler = () => {
   score = 20;
+  guesses = 0;
   gameScore.innerHTML = score;
   feedback.textContent = "";
+  secretNumber = Math.round(Math.random() * 10);
 };
 
 guessBtn.addEventListener("click", clickHandler);
 restartBtn.addEventListener("click", restartHandler);
-//check the number
-// const checkGuess = () = {}
-// give feedback; too high, too low, correct
-//adjust the score/
-//at tjhe end of the game, adjust the highsscore.
